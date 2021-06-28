@@ -58,8 +58,9 @@ for NAICS in naics_list:
 				except IndexError:
 					continue
 
-		if len(X) < 20:
+		if len(X) < 30:
 			print("Skipped "+NAICS+" due to lacking data.")
+			break
 
 		max_score = 0.0
 		best_random_state = -1
