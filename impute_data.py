@@ -86,5 +86,5 @@ for NAICS in naics_list:
 	print("Completed: "+NAICS)
 
 imp_data = imp_data.rename(columns = {'area_fips':'Fips', 'industry_code':'Naics', 'annual_avg_estabs':'Firms', 'annual_avg_emplvl':'Employees', 'total_annual_wages':'Wages'})
-imp_data.to_csv(path_or_buf = 'Data_2020_imp/13000i.csv', index = False)
+imp_data.to_csv(path_or_buf = 'Data_2020_imp/'+state+'000i.csv', index = False)
 print("Done!")
