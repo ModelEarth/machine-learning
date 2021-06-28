@@ -1,4 +1,4 @@
-# impute_data v1.0
+# impute_data v1.1
 # Creates CSV files with the missing data replaced.
 # John Andrew Taylor, June 2021
 
@@ -7,6 +7,12 @@ import pandas as pd
 from sklearn.neural_network import MLPRegressor
 from sklearn.datasets import make_regression
 from sklearn.model_selection import train_test_split
+
+# To remove convergence warnings
+import warnings
+from sklearn.exceptions import ConvergenceWarning
+
+warnings.filterwarnings(action='ignore', category=ConvergenceWarning)
 
 # Years to draw data from (local storage).
 years = ["2020", "2019"]
@@ -30,7 +36,7 @@ imp_data = pd.read_csv("Data_2020/"+state+"000.csv", usecols = ["area_fips", "in
 imp_data = imp_data.loc[imp_data["industry_code"].str.len() == NAICS_length]
 imp_data.insert(loc = 5, column = "Score", value = 0)
 
-#naics_list = ["811310"]
+#naics_list = ["541611"]
 
 for NAICS in naics_list:
 	for pred_col in pred_cols:
@@ -50,9 +56,10 @@ for NAICS in naics_list:
 						X.append([df.iloc[0]["annual_avg_estabs"]])
 						y.append(df.iloc[0][pred_col])
 				except IndexError:
-					print("Missing NAICS code "+NAICS+" in "+year+" data of "+fips+"000.csv")
+					continue
 
-		#print("Dataset size: " + str(len(X)))
+		if len(X) < 20:
+			print("Skipped "+NAICS+" due to lacking data.")
 
 		max_score = 0.0
 		best_random_state = -1
