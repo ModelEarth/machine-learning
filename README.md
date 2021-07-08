@@ -11,6 +11,10 @@ Currently, data is extracted using Python's urllib library (see extract_BLS_QCEW
 - TODO: Make extract_BLS_QCEW.py script more customizable and allow for user input prompts.
 - TODO: Write up an alternative method of data extraction using the EPA's flowsa library.
 
+### Bureau of Labor Statistics - QCEW Open Data Access: Sample Code
+
+The BLS has provided sample code in multiple languages to show how QCEW data can be extracted from their database. More information [here](https://data.bls.gov/cew/doc/access/data_access_examples.htm).
+
 ## Model Training
 
 The project is using Python's scikit-learn library. The models being used are [Multi-layer Perceptron Regressors](https://scikit-learn.org/stable/modules/generated/sklearn.neural_network.MLPRegressor.html) (neural networks). The most effective solver was the ‘lbfgs’ solver, an optimizer in the family of quasi-Newton methods, due to the small size of the dataset. The maximum iterations are set to 10,000 (this value is more than sufficient). The hidden layers and the activation functions have been left at their default values (100 and 'relu'), though no alternatives have been tested yet.
