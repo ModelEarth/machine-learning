@@ -1,3 +1,5 @@
+# File Generation
+
 The followng can be moved into a Github Action:
 
 First, download (refresh) the BLS data and the Census data in the Data_[Year] folders. The Census data is already in the repo since it will not change often. Also make sure that your folders are already set up the expected way. In the future, it would probably be easier to have the folders made automatically. Make sure to have ‘FIPS_state.csv’ since it helps automate the file naming. (We could automatically run this refresh quarterly.)
