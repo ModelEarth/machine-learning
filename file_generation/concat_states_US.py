@@ -1,5 +1,5 @@
 # concat_states_US.py v2.0
-# Concatenates BLS data at a state level
+# Concatenates BLS data at a state level in "country" folder
 # John Andrew Taylor, October 2021
 
 import pandas as pd
@@ -9,7 +9,7 @@ import glob
 NAICS_length = 0
 
 # Set to year desired. Must be string.
-year = "2021"
+year = "2020"
 
 # Set to quarter desired. Must be string.
 quarter = "Q1"
