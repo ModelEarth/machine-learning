@@ -17,7 +17,7 @@ Unzip the folder here:
 Changed q1-q1 to q1-q2 in three place.  
 Note that the q1-q2 will become q1-q3 within the next few months.  
 
-In add_population_US.py I renamed row["FIPS"] to row["area_fips"] in three places  
+In add_population_US.py, renamed row["FIPS"] to row["area_fips"] in three places.  
 
 
 The Census data is already in the repo since it will not change often. Also make sure that your folders are already set up the expected way. In the future, it would probably be easier to have the folders made automatically. Make sure to have ‘FIPS_state.csv’ since it helps automate the file naming. (We could automatically run this refresh quarterly.)
