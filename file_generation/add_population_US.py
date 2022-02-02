@@ -26,10 +26,10 @@ curr_pop = '0'
 
 for index, row in df.iterrows():
 
-    if row["FIPS"] != curr_fips:
-        curr_fips = row["FIPS"]
+    if row["area_fips"] != curr_fips:
+        curr_fips = row["area_fips"]
         try:
-            curr_pop = pop.loc[(pop["STATE"] == row["FIPS"][0:2]) & (pop["COUNTY"] == row["FIPS"][2:])]["POPESTIMATE2020"].item()
+            curr_pop = pop.loc[(pop["STATE"] == row["area_fips"][0:2]) & (pop["COUNTY"] == row["FIPS"][2:])]["POPESTIMATE2020"].item()
         except:
             curr_pop = '0'
     df.at[index, "Population"] = curr_pop
