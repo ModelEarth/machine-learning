@@ -16,7 +16,7 @@ year = "2021"
 quarter = "Q1"
 
 # Set source files appropriately. TODO: Automate.
-files = glob.glob("2021.q1-q1.by_area/2021.q1-q1 *.csv")
+files = glob.glob("2021.q1-q2.by_area/2021.q1-q2 *.csv")
 
 print(len(files))
 

@@ -16,7 +16,7 @@ year = "2020"
 quarter = "Q1"
 
 # Set source files appropriately. TODO: Automate.
-files = glob.glob("2021.q1-q1.by_area/*Statewide.csv")
+files = glob.glob("2021.q1-q2.by_area/*Statewide.csv")
 
 print("Number of state files found: "+ str(len(files)))
 
