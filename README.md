@@ -4,6 +4,11 @@
 
 The goal of this project is to create machine learning regression models which will replace missing employment data of the Bureau of Labor Statistics Quarterly Census of Employment & Wages.
 
+
+[Steps for generating files without gaps](file_generation)  
+[Our pipeline for static NAICS file output](https://model.earth/localsite/info/data/)  
+
+
 ## Data Extraction
 
 Currently, data is extracted using Python's urllib library (see extract_BLS_QCEW.py). This script accesses the BLS data directly through the permanent URL.
