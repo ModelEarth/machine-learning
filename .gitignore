@@ -1,4 +1,5 @@
 env
 file_generation/20*
 file_generation/country/
-Data_20*.cvs
+Data*
+.idea

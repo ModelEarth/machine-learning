@@ -1,6 +1,6 @@
 # File Generation
 
-The followng can be moved into a Github Action:
+The followng can be moved into a Github Action...
 
 First, [download (refresh) BLS data](https://www.bls.gov/cew/downloadable-data-files.htm) and the Census data in the Data_[Year] folders. The <!-- BLS -->files are large, so we exclude them from the repo.
 
