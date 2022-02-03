@@ -47,7 +47,14 @@ Then run ‘add_population_US.py’ for each NAICS length (set parameter inside 
 
 To get the county-level files for the states, first run ‘concat_counties_US.py’ for each NAICS length (done individually since length 6 is quite slow).
 
+TO DO: Add a loop from 2 to 6. Clear file_generation/country before testing.
+
 	python3 concat_states_US.py
 
-then run ‘add_population_US.py’ for each NAICS length. Now you will have the county-level data for all the US. Run ‘split_US_data.py’ to have the data split into separate files and organized by state. This will be slow for the NAICS codes of length 6.<!--John is working on optimization tricks to improve the running time.-->  
+Then run ‘add_population_US.py’ for each NAICS length (change length manually from 2 to 6 in file)
+
+add_population_US.py
+
+
+Now you will have the county-level data for all the US. Run ‘split_US_data.py’ to have the data split into separate files and organized by state. This will be slow for the NAICS codes of length 6.<!--John is working on optimization tricks to improve the running time.-->  
 

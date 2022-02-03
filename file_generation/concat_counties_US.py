@@ -5,8 +5,8 @@
 import pandas as pd
 import glob
 
-# Set to NAICS length desired
-NAICS_length = 2
+# Set to NAICS length desired - Manually change from 2 to 6
+# NAICS_length = 4
 # Note: can be changed to do all length NAICS, but will be slow
 
 # Set to year desired. Must be string.
@@ -20,10 +20,11 @@ files = glob.glob("2021.q1-q2.by_area/2021.q1-q2 *.csv")
 
 print(len(files))
 
-df = pd.DataFrame()
-for f in files:
-    csv = pd.read_csv(f, dtype = str, usecols = ['area_fips', 'industry_code', 'qtrly_estabs_count', 'month3_emplvl', 'total_qtrly_wages'])
-    csv = csv[csv["industry_code"].str.len() == NAICS_length]
-    df = df.append(csv)
+for i in range(2,7): # Generate for 2 to 6
+    df = pd.DataFrame()
+    for f in files:
+        csv = pd.read_csv(f, dtype = str, usecols = ['area_fips', 'industry_code', 'qtrly_estabs_count', 'month3_emplvl', 'total_qtrly_wages'])
+        csv = csv[csv["industry_code"].str.len() == i]
+        df = df.append(csv)
 
-df.to_csv('country/US-'+year+'-'+quarter+'-naics-'+str(NAICS_length)+'-digits.csv', index = False)
+    df.to_csv('country/US-'+year+'-'+quarter+'-naics-'+str(i)+'-digits.csv', index = False)
