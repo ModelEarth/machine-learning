@@ -54,4 +54,4 @@ These are some goals that would improve the current state of the project:
 - Introduce more input data, such as the population of an area, to improve the accuracy of the outputs.
 - Consider including more years of data for the model training.
 - Research multi-output regressors and determine their utility in this project.
-- Compare the results of independent regression models for wages with models using the predicted employee numbers as inputs.
+- Compare the results of independent regression models for wages with models using the predicted employee numbers as inputs..

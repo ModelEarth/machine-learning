@@ -14,7 +14,7 @@ fips_list = df['FIPS'].tolist()
 # Year that data will be requested.
 # This code uses annual averages, but quarterly data can also be extracted.
 #year = "2020"
-year = "2021" # Not yet available on Oct 20, 2021
+year = "2021" # 2022 not yet available as of Feb 03, 2022
 
 #currentRoot = 'C:/Users/Beetle/Dropbox (Personal)/Internship'
 currentRoot = '/Users/helix/Library/Data/machine-learning'
