@@ -27,4 +27,6 @@ for i in range(2,7): # Generate for 2 to 6
         csv = csv[csv["industry_code"].str.len() == i]
         df = df.append(csv)
 
-    df.to_csv('country/US-'+year+'-'+quarter+'-naics-'+str(i)+'-digits.csv', index = False)
+    df = df.rename(columns={"area_fips": "FIPS", "industry_code": "NAICS", "qtrly_estabs_count": "Establishments", "month3_emplvl": "Employees", "total_qtrly_wages": "Payroll"})
+
+    df.to_csv('country/US-counties-naics'+str(i)+'-'+year+'-'+quarter+'.csv', index = False)

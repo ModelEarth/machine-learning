@@ -6,11 +6,8 @@ import pandas as pd
 import glob
 import os
 
-# Do not change, will generate NAICS lengths 2, 4, and 6
-NAICS_length = 0
-
 # Set to year desired. Must be string.
-year = "2020"
+year = "2021"
 
 # Set to quarter desired. Must be string.
 quarter = "Q1"
@@ -24,16 +21,14 @@ folderPath = 'country'
 if not os.path.isdir(folderPath):
        os.makedirs(folderPath)
 
-# was 1,4
 for i in range(2,7): # Generate for 2 to 6
 	#NAICS_length = 2*i
-	NAICS_length = i
 	df = pd.DataFrame()
 	for f in files:
 	    csv = pd.read_csv(f, dtype = str, usecols = ['area_fips', 'industry_code', 'qtrly_estabs_count', 'month3_emplvl', 'total_qtrly_wages'])
-	    csv = csv[csv["industry_code"].str.len() == NAICS_length]
+	    csv = csv[csv["industry_code"].str.len() == i]
 	    df = df.append(csv)
 
 	df = df.rename(columns={"area_fips": "FIPS", "industry_code": "NAICS", "qtrly_estabs_count": "Establishments", "month3_emplvl": "Employees", "total_qtrly_wages": "Payroll"})
 
-	df.to_csv('country/US-'+year+'-'+quarter+'-naics-'+str(NAICS_length)+'-digits.csv', index = False)
+	df.to_csv('country/US-states-naics'+str(i)+'-'+year+'-'+quarter+'.csv', index = False)

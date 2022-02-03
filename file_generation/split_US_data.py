@@ -5,22 +5,21 @@
 import pandas as pd
 import random
 
-# Set to NAICS length desired
-NAICS_length = 2
-
 # Set to year desired. Must be string.
 year = "2021"
 
 # Set to quarter desired. Must be string.
 quarter = "Q1"
 
-df = pd.read_csv("country/US-"+year+"-"+quarter+"-naics-"+str(NAICS_length)+"-digits.csv", dtype = str)
+for i in range(2,7): # Generate for 2 to 6
 
-states = pd.read_csv("FIPS_state.csv", dtype = str)
-fips_list = states['FIPS'].tolist()
-usps_list = states['USPS'].tolist()
+    df = pd.read_csv('country/US-counties-naics'+str(i)+'-'+year+'-'+quarter+'.csv', dtype = str)
 
-for fips, usps in zip(fips_list, usps_list):
-    # print(usps)
-    state_df = df[df['FIPS'].str.startswith(fips)]
-    state_df.to_csv("states/"+usps+"/US-"+usps+"-"+year+"-"+quarter+"-naics-"+str(NAICS_length)+"-digits.csv", index = False)
+    states = pd.read_csv("FIPS_state.csv", dtype = str)
+    fips_list = states['FIPS'].tolist()
+    usps_list = states['USPS'].tolist()
+
+    for fips, usps in zip(fips_list, usps_list):
+        # print(usps)
+        state_df = df[df['FIPS'].str.startswith(fips)]
+        state_df.to_csv("states/"+usps+"/US-"+usps+'-counties-naics'+str(i)+'-'+year+'-'+quarter+'.csv', index = False)
