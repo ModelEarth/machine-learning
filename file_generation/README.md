@@ -11,8 +11,8 @@ https://www.bls.gov/cew/downloadable-data-files.htm
 Download the By Area > Quarterly > 2021 file.
 https://data.bls.gov/cew/data/files/2021/csv/2021_qtrly_by_area.zip
 
-Unzip the folder here:  
-2021.q1-q2.by_area  
+Unzip the folder and place the folder here:  
+file_generation/2021.q1-q2.by_area  
 
 Changed q1-q1 to q1-q2 in three place.  
 Note that the q1-q2 will become q1-q3 within the next few months.  
