@@ -2,7 +2,7 @@
 
 ## Summary
 
-The goal of this project is to create machine learning regression models which will replace missing employment data of the Bureau of Labor Statistics Quarterly Census of Employment & Wages.
+The goal of this project is to create machine learning regression models which will estimate missing employment data of the Bureau of Labor Statistics Quarterly Census of Employment & Wages.
 
 
 [Steps for generating files without gaps](file_generation)  
@@ -55,3 +55,5 @@ These are some goals that would improve the current state of the project:
 - Consider including more years of data for the model training.
 - Research multi-output regressors and determine their utility in this project.
 - Compare the results of independent regression models for wages with models using the predicted employee numbers as inputs..
+
+Looks interesting: [Flyte.org - Workflow Automation for Machine Learning](https://flyte.org/) used by Skype and Spotify
