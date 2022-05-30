@@ -1,13 +1,15 @@
 # Imputation Using Machine Learning
 
+The following is being move to: [https://model.earth/data-pipeline/research](https://model.earth/data-pipeline/research)
+
 ## Summary
 
-The goal of this project is to create machine learning regression models which will estimate missing employment data of the Bureau of Labor Statistics Quarterly Census of Employment & Wages.
-
+The goal of this project is to create machine learning regression models which will estimate (impute) missing employment data within the Bureau of Labor Statistics Quarterly Census of Employment & Wages.
 
 [Steps for generating files without gaps](file_generation)  
-[Our pipeline for static NAICS file output](https://model.earth/localsite/info/data/)  
+[Our pipeline for static NAICS file output](https://model.earth/data-pipeline/)  
 
+For comparison: [Imputing Missing Values in the US Census Bureau's County Business Patterns](http://www.fpeckert.me/cbp/)
 
 ## Data Extraction
 
@@ -49,11 +51,11 @@ Adding more years of data seems to improve the performance of the models. For ex
 
 These are some goals that would improve the current state of the project:
 
-- Make all scripts very modular and allow user input to tweak them.
-- Test out different types of regression models, such as Kernel Ridge Regression and Random Forest Regression.
+- Make all scripts modular and parameters to allow user input to tweak them.
+- Test different types of regression models, such as Kernel Ridge Regression and Random Forest Regression.
 - Introduce more input data, such as the population of an area, to improve the accuracy of the outputs.
 - Consider including more years of data for the model training.
 - Research multi-output regressors and determine their utility in this project.
-- Compare the results of independent regression models for wages with models using the predicted employee numbers as inputs..
+- Compare the results of independent regression models for wages with models using the predicted employee numbers as inputs.
 
 Looks interesting: [Flyte.org - Workflow Automation for Machine Learning](https://flyte.org/) used by Skype and Spotify
