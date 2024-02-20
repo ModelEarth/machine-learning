@@ -9,7 +9,7 @@ Related documentation: [https://model.earth/data-pipeline/research](https://mode
 The goal of this project is to create machine learning regression models which will estimate (impute) missing employment data within the Bureau of Labor Statistics Quarterly Census of Employment & Wages.
 
 [Steps for generating files without gaps](file_generation)  
-[Our pipeline for static NAICS file output](https://model.earth/data-pipeline/)  
+[Our pipeline for static NAICS file output](https://model.earth/community-data/process/python/bea/)  
 
 For comparison: [Imputing Missing Values in the US Census Bureau's County Business Patterns](http://www.fpeckert.me/cbp/)
 
@@ -18,7 +18,8 @@ For comparison: [Imputing Missing Values in the US Census Bureau's County Busine
 Currently, data is extracted using Python's urllib library (see extract_BLS_QCEW.py). This script accesses the BLS data directly through the permanent URL.
 
 - TODO: Make extract_BLS_QCEW.py script more customizable and allow for user input prompts.
-- TODO: Write up an alternative method of data extraction using the EPA's flowsa library.
+- TODO: Figure out if we should pull from our [pre-processed FIPS and ZTCA annual files](http://model.earth/community-data/process/python/bea). -- [View annual output](https://github.com/ModelEarth/community-data/tree/master/industries/naics/US/counties)
+- TODO: Document how we could use ML processes with the [EPA's Flowsa library](https://github.com/USEPA/flowsa).
 
 ### Bureau of Labor Statistics - QCEW Open Data Access: Sample Code
 
