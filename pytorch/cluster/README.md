@@ -15,6 +15,8 @@ In the current folder, create a virtual environment and install libraries.
 	pip install pandas &&
 	pip install tqdm &&
 	pip install scikit-learn &&
+	pip install matplotlib &&
+	pip install numpy &&
 	pip install notebook &&
 	pip install --upgrade nbconvert &&
 	jupyter-notebook
