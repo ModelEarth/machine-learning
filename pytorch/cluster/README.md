@@ -6,6 +6,9 @@ Uses USEEIO matrix files from:
 
 /io/build/api
 
+
+[Network Graph Charts](/community/start/charts/) - [Sankey](/io/charts/sankey/) - [Chord](/io/charts/chord)
+
 ## Run Jupyter
 
 Run in your webroot so you can access files in the io repo.
