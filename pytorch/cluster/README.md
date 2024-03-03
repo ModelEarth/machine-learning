@@ -8,7 +8,8 @@ Uses USEEIO matrix files from:
 
 ## Run Jupyter
 
-In the current folder, create a virtual environment and install libraries.
+Run in the webroot so you can access files in the io repo.
+Creates a virtual environment and install libraries.
 
 	python3 -m venv env &&
 	source env/bin/activate &&
