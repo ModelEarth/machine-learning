@@ -15,9 +15,9 @@ For comparison: [Imputing Missing Values in the US Census Bureau's County Busine
 
 ## Data Extraction
 
-Currently, data is extracted using Python's urllib library (see extract_BLS_QCEW.py). This script accesses the BLS data directly through the permanent URL.
+Currently, data is extracted using Python's urllib library (see extract\_BLS\_QCEW.py). This script accesses the BLS data directly through the permanent URL.
 
-- TODO: Make extract_BLS_QCEW.py script more customizable and allow for user input prompts.
+- TODO: Make extract\_BLS\_QCEW.py script more customizable and allow for user input prompts.
 - TODO: Figure out if we should pull from our [pre-processed FIPS and ZTCA annual files](http://model.earth/community-data/process/python/bea). -- [View annual output](https://github.com/ModelEarth/community-data/tree/master/industries/naics/US/counties)
 - TODO: Document how we could use ML processes with the [EPA's Flowsa library](https://github.com/USEPA/flowsa).
 
@@ -33,7 +33,7 @@ A separate model is created for each NAICS code. The training and testing sets a
 
 Model persistence during development is guaranteed by setting the random state numbers of both the data splitting process and the model training process.
 
-Note: Currently, the model_test_single.py script will only create models for predicting employment level or wages, not both at the same time. The models only use existing data as the X and y sets, but more information, such as population size and average wage of the FIPS code might be added.
+Note: Currently, the model\_test\_single.py script will only create models for predicting employment level or wages, not both at the same time. The models only use existing data as the X and y sets, but more information, such as population size and average wage of the FIPS code might be added.
 
 ## Model Testing
 
