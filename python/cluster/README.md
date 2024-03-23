@@ -31,6 +31,6 @@ Creates a virtual environment and installs libraries.
 For each state we extract information from matrix.D for subsequent clustering, 
 and reshape the 2D matrix into an 1D vector.
 
-For each state we extract information from matrix.D for subsequent clustering, and reshape the 2D matrix into an 1D vector.
+We assign to 3 clusters (using the dimension-reduced vectorized D-matrix) to cluster all states.
 
-Assigning 3 clusters, using the dimension-reduced vectorized D-matrix to cluster all these five states.
+Learn more about the [state matrix input-output files](/io/about/matrix/).
