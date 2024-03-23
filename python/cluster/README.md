@@ -24,3 +24,13 @@ Creates a virtual environment and installs libraries.
 	pip install notebook &&
 	pip install --upgrade nbconvert &&
 	jupyter-notebook
+
+
+## clustering.ipynb
+
+For each state we extract information from matrix.D for subsequent clustering, 
+and reshape the 2D matrix into an 1D vector.
+
+For each state we extract information from matrix.D for subsequent clustering, and reshape the 2D matrix into an 1D vector.
+
+Assigning 3 clusters, using the dimension-reduced vectorized D-matrix to cluster all these five states.
