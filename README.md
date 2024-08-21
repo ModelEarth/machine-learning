@@ -18,7 +18,7 @@ For comparison: [Imputing Missing Values in the US Census Bureau's County Busine
 Currently, data is extracted using Python's urllib library (see extract\_BLS\_QCEW.py). This script accesses the BLS data directly through the permanent URL.
 
 - TODO: Make extract\_BLS\_QCEW.py script more customizable and allow for user input prompts.
-- TODO: Figure out if we should pull from our [pre-processed FIPS and ZTCA annual files](http://model.earth/community-data/process/python/bea). -- [View annual output](https://github.com/ModelEarth/community-data/tree/master/industries/naics/US/counties)
+- TODO: Figure out if we should pull from our [pre-processed FIPS and ZCTA zipcode annual files](http://model.earth/community-data/process/python/bea). -- [View annual output](https://github.com/ModelEarth/community-data/tree/master/industries/naics/US/counties)
 - TODO: Document how we could use ML processes with the [EPA's Flowsa library](https://github.com/USEPA/flowsa).
 
 ### Bureau of Labor Statistics - QCEW Open Data Access: Sample Code
