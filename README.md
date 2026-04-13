@@ -2,7 +2,7 @@
 
 As of 2017, the US Census inserts estimates (perturbs cells) for small employment counts. Therefore, [fpeckert](http://www.fpeckert.me/cbp/) does not impute data from 2017 forward since there are no missing cells in the data.
 
-Related documentation: [https://model.earth/data-pipeline/research](https://model.earth/data-pipeline/research)
+Data Pipeline: [https://model.earth/data-pipeline](https://model.earth/data-pipeline)
 
 ## Summary
 
